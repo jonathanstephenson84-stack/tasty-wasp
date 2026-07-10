@@ -131,3 +131,25 @@ a {
     transform-origin: left;
   }
 }
+.nav-link {
+  position: relative;
+}
+
+.nav-link::after {
+  background: currentColor;
+  bottom: -0.3rem;
+  content: "";
+  height: 1px;
+  left: 0;
+  position: absolute;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 300ms cubic-bezier(0.22, 1, 0.36, 1);
+  width: 100%;
+}
+
+.nav-link:hover::after,
+.nav-link:focus-visible::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}

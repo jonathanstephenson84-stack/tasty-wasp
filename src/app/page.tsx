@@ -1,3 +1,5 @@
+import Hero from "@/components/Hero";
+import Header from "@/components/Header";
 import { ContactForm } from "@/components/ContactForm";
 
 const editions = [
@@ -94,93 +96,10 @@ function EditionRow({ edition }: { edition: (typeof editions)[number] }) {
 export default function Home() {
   return (
     <main className="min-h-screen bg-bone text-carbon">
-      <header className="fixed left-0 top-0 z-50 hidden h-screen w-[260px] flex-col justify-between border-r border-stone bg-carbon p-8 text-bone lg:flex">
-        <div>
-          <a
-            href="#content"
-            className="block text-3xl font-semibold uppercase leading-none tracking-[0.18em]"
-          >
-            Tasty
-            <br />
-            Wasp
-          </a>
+      <Header />
 
-          <p className="mt-10 max-w-[12rem] text-sm leading-6 text-bone/70">
-            Building brands designed to be remembered.
-          </p>
-
-          <nav className="mt-20 space-y-8 text-sm">
-            <a
-              className="block border-t border-bone/20 pt-6 hover:text-ochre"
-              href="#work"
-            >
-              01 Archive
-            </a>
-            <a
-              className="block border-t border-bone/20 pt-6 hover:text-ochre"
-              href="#standard"
-            >
-              02 The Standard
-            </a>
-            <a
-              className="block border-t border-bone/20 pt-6 hover:text-ochre"
-              href="#journal"
-            >
-              03 Journal
-            </a>
-            <a
-              className="block border-t border-bone/20 pt-6 hover:text-ochre"
-              href="#contact"
-            >
-              04 Contact
-            </a>
-          </nav>
-        </div>
-
-        <div className="space-y-6 text-xs text-bone/70">
-          <p>Chichester, West Sussex</p>
-          <p>Working across the UK</p>
-          <p>TW-D001 / Edition 2.0</p>
-        </div>
-      </header>
-
-      <div className="lg:pl-[260px]">
-        <section
-          id="content"
-          className="grid min-h-screen content-between px-6 py-8 md:px-12 md:py-12"
-        >
-          <div className="flex items-start justify-between">
-            <p className="text-xs font-semibold uppercase text-muted">
-              TW-H001
-            </p>
-            <p className="text-xs font-semibold uppercase text-muted">
-              Edition 2.0
-            </p>
-          </div>
-
-          <div>
-            <h1 className="word-mask text-[5rem] font-black uppercase leading-[0.82] tracking-[-0.08em] sm:text-[8rem] md:text-[12rem] xl:text-[17rem]">
-              <span>Tasty</span>
-              <span>Wasp</span>
-            </h1>
-
-            <p className="mt-10 max-w-2xl text-4xl leading-none tracking-[-0.04em] md:text-7xl">
-              Building brands designed to be remembered.
-            </p>
-          </div>
-
-          <div className="grid gap-8 border-t border-stone pt-6 md:grid-cols-3">
-            <p className="text-sm text-muted">
-              Independent branding studio based in Chichester, West Sussex.
-            </p>
-            <p className="text-sm text-muted">
-              Identity / Digital / Motion / Design Systems.
-            </p>
-            <p className="text-sm text-muted md:text-right">
-              Scroll to explore ↓
-            </p>
-          </div>
-        </section>
+      <div className="pt-[57px]">
+        <Hero />
 
         <section id="work">
           {editions.map((edition) => (
